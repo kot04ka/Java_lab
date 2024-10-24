@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class CompareRealPart {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Введення двох дійсних чисел
+        System.out.println("Введіть перше дійсне число:");
+        double num1 = scanner.nextDouble();
+
+        System.out.println("Введіть друге дійсне число:");
+        double num2 = scanner.nextDouble();
+
+        // Порівняння дійсної частини чисел
+        double realPart1 = Math.abs(num1 - Math.floor(num1));
+        double realPart2 = Math.abs(num2 - Math.floor(num2));
+
+        if (realPart1 > realPart2) {
+            System.out.println("Перше число має більшу дійсну частину.");
+        } else if (realPart1 < realPart2) {
+            System.out.println("Друге число має більшу дійсну частину.");
+        } else {
+            System.out.println("Обидва числа мають однакову дійсну частину.");
+        }
+    }
+}
